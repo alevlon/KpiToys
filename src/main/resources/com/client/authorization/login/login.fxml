@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.authorization.login.LoginController">
+   <children>
+      <ImageView fitHeight="869.0" fitWidth="1313.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-69.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-13.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../images/login_background.jpg" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.54" contrast="-0.31" hue="-0.02" saturation="0.12" />
+         </effect>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </ImageView>
+      <AnchorPane layoutX="412.0" layoutY="162.0" opacity="0.95" prefHeight="543.0" prefWidth="450.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <Text layoutX="168.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="0.20000001788139343" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.2652439024390244">
+                           <color>
+                              <Color red="1.0" green="0.20000001788139343" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.7651006711409396">
+                           <color>
+                              <Color red="1.0" green="0.610084056854248" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Text>
+            <ImageView fitHeight="54.0" fitWidth="49.0" layoutX="201.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/login_signIn.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="49.0" fitWidth="49.0" layoutX="50.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/login_user.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="usernameField" layoutX="106.0" layoutY="188.0" prefHeight="49.0" prefWidth="260.0" promptText="Login" style="-fx-border-color: white; -fx-background-color: white;">
+               <font>
+                  <Font name="Dubai Bold" size="15.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="passwordField" layoutX="109.0" layoutY="281.0" prefHeight="49.0" prefWidth="260.0" promptText="Password" style="-fx-border-color: white; -fx-background-color: white;">
+               <font>
+                  <Font name="Dubai Bold" size="15.0" />
+               </font>
+            </PasswordField>
+            <Text fill="GREY" layoutX="115.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Can contain letters and numbers " textAlignment="CENTER" wrappingWidth="172.271484375">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Text>
+            <Text fill="GREY" layoutX="109.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Must contain upper case, lower case, number" textAlignment="CENTER" wrappingWidth="231.271484375">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="49.0" fitWidth="55.0" layoutX="50.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../images/login_password.png" />
+               </image>
+            </ImageView>
+            <Line fx:id="usernameLine" endX="132.0" layoutX="232.0" layoutY="237.0" startX="-118.0" stroke="#ffac00" strokeType="OUTSIDE" strokeWidth="2.0" />
+            <Line fx:id="passwordLine" endX="127.0" layoutX="242.0" layoutY="330.0" startX="-128.0" stroke="#ffac00" strokeType="OUTSIDE" strokeWidth="2.0" />
+            <Button fx:id="logInButton" layoutX="123.0" layoutY="384.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="203.0" style="-fx-border-color: #ffac00; -fx-background-color: white; -fx-border-width: 3;" text="Sign in" textFill="#ffaa00">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Text fill="GREY" layoutX="87.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Still don't have an account?" textAlignment="CENTER" wrappingWidth="162.271484375">
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </Text>
+            <Button fx:id="signUpButton" layoutX="250.0" layoutY="489.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="89.0" style="-fx-border-color: #ffac00; -fx-background-color: white; -fx-border-width: 1;" text="Sign up" textFill="#ffac00">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
